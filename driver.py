@@ -33,7 +33,7 @@ alpha = 0.01
 #theta is the same 2 x 1 matrix and J_plot has 1500 values in a array
 theta, J_plot= lr.gradientDescent(X, y, theta, iteration, alpha)
 
-#plotting the cost of hypothesis in 1500 iterations
+#plotting the cost of hypothesis in 1500 iterationset
 pd.plotDataJ('x-label', 'y-label', J_plot)
 #the optimised theta is
 print('The optimised theta is : ')
@@ -60,6 +60,5 @@ print(theta.T.dot([1, 3.5])*10000)
 
 #plotting cost for each value of theta and plotting a 3D graph of the same
 pd.plotDataCOST(X, y)
-
 
 """ Contour plots are still to be completed"""

@@ -14,3 +14,15 @@ def gradientDescent(X, y, theta, iteration, alpha):
 		theta = theta - alpha*(1/y.size)*(X.T.dot(X.dot(theta)-y))
 		J_temp[i]=ComputeCost(X,y,theta)
 	return(theta, J_temp)
+	
+	
+"""References for the usage. Find the used functions or operator here"""
+
+"""
+1. .T operator - transpose operator
+	[1, 2, 3, 4] return itself after transpose because it is considered as a single dimension in numpy array
+	[[1, 2, 3, 4]] returns [[1],[2],[3],[4]] after its transpose because it is considered as a two dimensional array in numpy
+
+2. .dot operator - matrix multiplication operator
+
+"""
