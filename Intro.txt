@@ -14,3 +14,5 @@ Apart from using this module the main use of this module is to study the algorit
 4. The datas folder consists of the data we use to check the algorithms.
 
 ========================================================================================
+
+The logistic regression algorithm is in development. We need to use minimize in the provided format of X, y, theta. Custom cost function should be coded in the code file.
