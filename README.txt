@@ -15,4 +15,15 @@ Apart from using this module the main use of this module is to study the algorit
 
 ========================================================================================
 
+DriverX.py are the files which shows implementations of various algorithms. The algorithms used and their corresponding driver files are - 
+
+	1. driver.py	:	Linear Regression
+	2. driver1.py	:	Logistic Regression	(WIP)
+	3. driver2.py	:	Multiclass Classification
+	4. driver3.py	:	Neural Networks	(WIP)
+
+WIP- Work in Progress
+
+========================================================================================
+
 The logistic regression algorithm is in development. We need to use minimize in the provided format of X, y, theta. Custom cost function should be coded in the code file.

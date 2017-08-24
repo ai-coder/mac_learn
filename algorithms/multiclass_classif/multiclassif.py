@@ -1,5 +1,6 @@
 import numpy as np
 from scipy.optimize import minimize
+from sklearn.linear_model import LogisticRegression
 
 def sigmoid(Z):
 	return 1/(1+np.exp(-Z))
@@ -30,4 +31,10 @@ def getTheta(features, classes, n_labels, lam):
 		res = minimize(lrcomputeCostReg, theta, args=(lam, features, (classes==c)*1), method = None, jac = lrGradReg, options={'maxiter':50})
 		all_theta[c-1] = res.x
 	return(all_theta)
+	
+"""The following function implements Multiclass Logistic Regression with scikit-learn module"""
+def sklTheta(X, y):
+	clf = LogisticRegression(C=10, penalty='l2', solver='liblinear')
+	clf.fit(X[:,1:], y.ravel())
+	return clf
 	

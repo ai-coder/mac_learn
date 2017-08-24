@@ -6,7 +6,7 @@ import algorithms.multiclass_classif.multiclassif as mc
 from scipy.io import loadmat
 from scipy.optimize import minimize
 
-from sklearn.linear_model import LogisticRegression
+
 
 """ loading data from matlab file where datas are stored in form of dictionary. You can use data.keys() or weights.keys() to get the list of the keys in the dictionary."""
 
@@ -29,3 +29,10 @@ theta = mc.getTheta(X,y,10,0.1)
 probs = mc.sigmoid(X.dot(theta.T))
 pred = np.argmax(probs, axis=1)+1
 print('Training set accuracy : {} %'.format(np.mean(pred==y.ravel())*100))
+
+
+"""Using scikit-learn to predict multiple logistic regression"""
+#contributers are welcomed to write the details of the method scikit-learn uses to optimize data
+clf = mc.sklTheta(X,y)
+pred2 = clf.predict(X[:,1:])
+print('Training set accuracy : {} %'.format(np.mean(pred2==y.ravel())*100))
