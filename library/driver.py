@@ -13,6 +13,7 @@ data = np.genfromtxt("datas/data1_1.txt", delimiter=',')
 #X becomes a 97x2 matrix with first column as 1s and y becomes a 97x1 matrix
 X=np.c_[np.ones(data.shape[0]),data[:,0]]
 y=np.c_[data[:,1]]
+print(data)
 
 
 #plotting X and y
